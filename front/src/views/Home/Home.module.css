@@ -1,0 +1,25 @@
+.homeSection {
+    padding: 20px 0;
+
+    text-align: center;
+    
+}
+
+.sectionTitle {
+    margin-bottom: 5px;
+
+    color: #2c3e50; 
+    
+    font-size: 36px;
+}
+    
+
+
+.sectionDivisor {
+    width: 50px;
+    height: 2px;
+    margin: 0 auto 20px;
+
+    background-color: #2c3e50; 
+    
+}

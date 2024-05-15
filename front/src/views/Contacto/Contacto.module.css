@@ -1,0 +1,72 @@
+.container{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 5px;
+
+    color: #2c3e50; 
+    
+    font-size: 36px;
+}
+    
+
+
+.divisor {
+    width: 150px;
+    height: 2px;
+    margin: 0 auto 20px;
+
+    background-color: #2c3e50; 
+    
+}
+
+.containerTargets{
+    display: flex; 
+    justify-content: space-around; 
+    flex-wrap: wrap;
+    
+}
+
+.target{
+    padding: 20px;
+    width: 250px;
+    margin-bottom: 20px;
+
+    background-color: #2c3e50;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+
+    text-align: center;
+
+    transition: transform 0.3s ease; 
+}
+
+.target:hover{
+    transform: translateY(-5px);
+}
+
+.target a {
+    text-decoration: none;
+}
+
+.target img {
+    width: 100%; 
+    height: 250px; 
+    
+    object-fit: cover;
+    
+    border-radius: 3%; 
+}
+
+
+.target h3 {
+    margin-top: 20px;
+    
+    font-size: 18px;
+    color: white; 
+}
