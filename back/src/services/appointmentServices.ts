@@ -32,7 +32,7 @@ export const getAppointmentByIdService = async (id : number) : Promise<Appointme
 
 export const createAppointmentService = async (appointmentData : IAppointmentDto): Promise <Appointment> => {
 
-    //Usuario que saca el turno
+
     const user : User | null = await userRepository.findOneBy({
         id: appointmentData.userId
     })

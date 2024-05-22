@@ -10,8 +10,8 @@ export const AppDataSource = new DataSource({
     host: DB_HOST,
     port: DB_PORT,
     username: DB_USERNAME,
-    password: DB_PASSWORD, // Contraseña de nuestra db
-    database: DB_TYPE, // Nombre de la db
+    password: DB_PASSWORD, 
+    database: DB_TYPE, 
     //dropSchema : true,
     synchronize: true,
     logging: false,

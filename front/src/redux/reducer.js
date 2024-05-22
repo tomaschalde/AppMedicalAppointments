@@ -22,7 +22,7 @@ export const userSlice = createSlice({
             state.userAppointments = state.userAppointments.map((appointment) => {
 
                 if(appointment.id === action.payload){
-                    return {...appointment, status: "cancelled"} //Retorno un objeto con todas las propiedades del turno pero solo con el estado modificado a cancelado
+                    return {...appointment, status: "cancelled"} 
                 }
 
                 return appointment;

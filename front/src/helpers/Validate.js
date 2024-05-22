@@ -23,19 +23,19 @@ export const validate = (input) => {
 export const validateAppointment = (input) => {
     let errors = {}
 
-    //Validacion fecha
+ 
     const date = input.date.split("-")
     const dateActual = new Date().toLocaleDateString().split("/").reverse()
     
-    //Si el año recibido es menor al año actual
+
     if(Number(date[0]) < Number(dateActual[0]) )  
         errors = {...errors, date: "Seleccione un año válido"};
 
-    //Si el mes recibido es menor al mes actual
+
     if(Number(date[0]) === Number(dateActual[0]) && Number(date[1]) < Number(dateActual[1]))
         errors = {...errors, date: "Seleccione un mes válido"};
 
-    //Si el mes recibido es igual al mes actual y el dia recibido es menor o igual al dia actual
+
     if(Number(date[1]) === Number(dateActual[1]) && Number(date[2]) <= Number(dateActual[2])) 
         errors = {...errors, date: "Seleccione un día válido"};
 
@@ -45,19 +45,19 @@ export const validateAppointment = (input) => {
     if(dayWeek === 6 || dayWeek === 5)
         errors = {...errors, date: "Seleccione un día válido"};
     
-    //Validacion hora
+
     const hour = input.time.split(":")
     
-    //Si la hora recibida es menor a 8 o mayor a 20
+
     if(Number(hour[0]) < 8 || Number(hour[0]) > 20)
         errors = {...errors, time: "Seleccione un horario válido"};
 
-    //Si la hora recibida es menor o igual a 7, o mayor o igual a 20. Y si el minuto es mayor o igual a 1 o menor o igual a 59
+
     if((Number(hour[0]) <= 7 || Number(hour[0]) >= 20) && (Number(hour[1]) >= 1 || Number(hour[1]) <= 59 ))
         errors = {...errors, time: "Seleccione un horario válido"};
 
 
-    //Validacion especialidad
+
     if(input.description === "") errors = {...errors, description: "Seleccione una especialidad"};
 
     return errors

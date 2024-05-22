@@ -22,9 +22,9 @@ export class User {
     @Column({unique : true})
     nDni: string
 
-    //Relacion uno a uno con credenciales
+
     @OneToOne (() => Credential)
-    //Agregmos la columna "credential" que guarda la relacion con las credenciales
+
     @JoinColumn()
     credential: Credential
 
